@@ -2139,6 +2139,11 @@ func (f *Fpdf) GetFontSize() (ptSize, unitSize float64) {
 	return f.fontSizePt, f.fontSize
 }
 
+// GetCurrentFont returns the current font
+func (f *Fpdf) GetCurrentFont() fontDefType {
+	return f.currentFont
+}
+
 // AddLink creates a new internal link and returns its identifier. An internal
 // link is a clickable area which directs to another place within the document.
 // The identifier can then be passed to Cell(), Write(), Image() or Link(). The
